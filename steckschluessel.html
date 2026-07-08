@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Außen/Innensechskantsatz – SamyScripts Shop</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="index.html">SAMYSCRIPTS</a>
+  <div class="nav-right">
+    <a class="back-btn" href="index.html">← Alle Produkte</a>
+    <button class="cart-btn" onclick="toggleCart()">🛒 Warenkorb <div class="cart-count" id="cartCount">0</div></button>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="product-image-area">
+    <!-- BILD: Ersetze src="BILD_STECKSCHLUESSEL" mit deinem Bildlink -->
+    <div class="img-placeholder">🔧</div>
+  </div>
+  <div class="product-info">
+    <div class="product-tag">✦ Werkzeug-Set</div>
+    <div class="product-name">AUSSEN/INNENSECHSKANTSATZ</div>
+    <div class="product-desc">94-teiliger Profi-Steckschlüsselsatz mit Umschaltknarre, Verlängerungen, Gelenk und Bits — alles übersichtlich im robusten Kunststoffkoffer. Deckt alle gängigen Schraubengrößen am AM6-Motor ab und macht dich für jeden Eingriff gerüstet.</div>
+    <div class="divider"></div>
+    <div class="price-row"><div class="price-main">€ 59,90</div><div class="price-sub">inkl. MwSt. · zzgl. Versand</div></div>
+    <div class="specs"><div class="spec"><div class="spec-label">Teile</div><div class="spec-val">94-teilig</div></div><div class="spec"><div class="spec-label">Antrieb</div><div class="spec-val">1/4" & 1/2"</div></div><div class="spec"><div class="spec-label">Material</div><div class="spec-val">Chrom-Vanadium</div></div><div class="spec"><div class="spec-label">Koffer</div><div class="spec-val">Inkl.</div></div></div>
+    <div class="includes"><div class="includes-title">Lieferumfang</div><div class="includes-list"><div class="includes-item"><div class="includes-dot"></div>Umschaltknarre 1/4" und 1/2"</div><div class="includes-item"><div class="includes-dot"></div>Steckschlüssel 4–32mm</div><div class="includes-item"><div class="includes-dot"></div>Verlängerungen und Gelenk</div><div class="includes-item"><div class="includes-dot"></div>Bit-Satz</div><div class="includes-item"><div class="includes-dot"></div>Robuster Koffer</div></div></div>
+    <div class="qty-row">
+      <div class="qty-label">Menge</div>
+      <div class="qty-control">
+        <button class="qty-btn" onclick="changeQty(-1)">−</button>
+        <div class="qty-num" id="qty">1</div>
+        <button class="qty-btn" onclick="changeQty(1)">+</button>
+      </div>
+    </div>
+    <button class="btn-add" onclick="addToCart('Außen/Innensechskantsatz', 59.9, '🔧', 'https://buy.stripe.com/7sY9AV9ac3hZaxdeyTdEs0g')">🛒 In den Warenkorb</button>
+    <div class="features">
+      <div class="feature"><div class="feature-dot"></div>Versand 2–3 Werktage</div>
+      <div class="feature"><div class="feature-dot"></div>14 Tage Rückgabe</div>
+      <div class="feature"><div class="feature-dot"></div>Sichere Zahlung</div>
+    </div>
+  </div>
+</div>
+
+<div class="overlay" id="overlay" onclick="toggleCart()"></div>
+<div class="cart-drawer" id="cartDrawer">
+  <div class="drawer-header"><div class="drawer-title">WARENKORB</div><button class="close-btn" onclick="toggleCart()">✕</button></div>
+  <div class="drawer-items" id="drawerItems"><div class="empty-cart">Dein Warenkorb ist leer.</div></div>
+  <div class="drawer-footer">
+    <div class="total-row"><div class="total-label">Gesamt</div><div class="total-amount" id="totalAmount">€ 0,00</div></div>
+    <button class="btn-checkout" id="checkoutBtn" onclick="checkout()" disabled>💳 Jetzt bezahlen via Stripe</button>
+    <div class="secure-note">🔒 Sichere Zahlung via Stripe</div>
+  </div>
+</div>
+<div class="toast" id="toast">✓ Zum Warenkorb hinzugefügt</div>
+<script src="cart.js"></script>
+
+<footer>
+  <div>© 2025 SamyScripts · Alle Preise inkl. MwSt.</div>
+  <div>Versand · Rückgabe · Impressum</div>
+</footer>
+</body>
+</html>

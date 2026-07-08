@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abzieher-Set – SamyScripts Shop</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="index.html">SAMYSCRIPTS</a>
+  <div class="nav-right">
+    <a class="back-btn" href="index.html">← Alle Produkte</a>
+    <button class="cart-btn" onclick="toggleCart()">🛒 Warenkorb <div class="cart-count" id="cartCount">0</div></button>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="product-image-area">
+    <!-- BILD: Ersetze src="BILD_ABZIEHER" mit deinem Bildlink -->
+    <div class="img-placeholder">⚙️</div>
+  </div>
+  <div class="product-info">
+    <div class="product-tag">✦ AM6 Werkzeug</div>
+    <div class="product-name">ABZIEHER-SET</div>
+    <div class="product-desc">Universal Polrad-Abzieher-Set mit 13 Gewindeadaptern für alle gängigen Motorgewinde. Für den sauberen und beschädigungsfreien Ausbau von Polrädern, Kupplungsglocken und anderen aufgesteckten Bauteilen am AM6-Motor.</div>
+    <div class="divider"></div>
+    <div class="price-row"><div class="price-main">€ 29,90</div><div class="price-sub">inkl. MwSt. · zzgl. Versand</div></div>
+    <div class="specs"><div class="spec"><div class="spec-label">Adapter</div><div class="spec-val">13 Stück</div></div><div class="spec"><div class="spec-label">Gewinde</div><div class="spec-val">M14–M28</div></div><div class="spec"><div class="spec-label">Material</div><div class="spec-val">Gehärteter Stahl</div></div><div class="spec"><div class="spec-label">Koffer</div><div class="spec-val">Inkl.</div></div></div>
+    <div class="includes"><div class="includes-title">Lieferumfang</div><div class="includes-list"><div class="includes-item"><div class="includes-dot"></div>Abzieher-Grundkörper</div><div class="includes-item"><div class="includes-dot"></div>13 Gewindeadapter</div><div class="includes-item"><div class="includes-dot"></div>Koffer</div></div></div>
+    <div class="qty-row">
+      <div class="qty-label">Menge</div>
+      <div class="qty-control">
+        <button class="qty-btn" onclick="changeQty(-1)">−</button>
+        <div class="qty-num" id="qty">1</div>
+        <button class="qty-btn" onclick="changeQty(1)">+</button>
+      </div>
+    </div>
+    <button class="btn-add" onclick="addToCart('Abzieher-Set', 29.9, '⚙️', 'https://buy.stripe.com/fZu5kFaegf0HcFlduPdEs0b')">🛒 In den Warenkorb</button>
+    <div class="features">
+      <div class="feature"><div class="feature-dot"></div>Versand 2–3 Werktage</div>
+      <div class="feature"><div class="feature-dot"></div>14 Tage Rückgabe</div>
+      <div class="feature"><div class="feature-dot"></div>Sichere Zahlung</div>
+    </div>
+  </div>
+</div>
+
+<div class="overlay" id="overlay" onclick="toggleCart()"></div>
+<div class="cart-drawer" id="cartDrawer">
+  <div class="drawer-header"><div class="drawer-title">WARENKORB</div><button class="close-btn" onclick="toggleCart()">✕</button></div>
+  <div class="drawer-items" id="drawerItems"><div class="empty-cart">Dein Warenkorb ist leer.</div></div>
+  <div class="drawer-footer">
+    <div class="total-row"><div class="total-label">Gesamt</div><div class="total-amount" id="totalAmount">€ 0,00</div></div>
+    <button class="btn-checkout" id="checkoutBtn" onclick="checkout()" disabled>💳 Jetzt bezahlen via Stripe</button>
+    <div class="secure-note">🔒 Sichere Zahlung via Stripe</div>
+  </div>
+</div>
+<div class="toast" id="toast">✓ Zum Warenkorb hinzugefügt</div>
+<script src="cart.js"></script>
+
+<footer>
+  <div>© 2025 SamyScripts · Alle Preise inkl. MwSt.</div>
+  <div>Versand · Rückgabe · Impressum</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dichtmasse RTV – SamyScripts Shop</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="index.html">SAMYSCRIPTS</a>
+  <div class="nav-right">
+    <a class="back-btn" href="index.html">← Alle Produkte</a>
+    <button class="cart-btn" onclick="toggleCart()">🛒 Warenkorb <div class="cart-count" id="cartCount">0</div></button>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="product-image-area">
+    <!-- BILD: Ersetze src="BILD_DICHTMASSE" mit deinem Bildlink -->
+    <div class="img-placeholder">🧪</div>
+  </div>
+  <div class="product-info">
+    <div class="product-tag">✦ Zubehör</div>
+    <div class="product-name">DICHTMASSE<br>RTV</div>
+    <div class="product-desc">Rotes RTV-Silikon für Motor- und Flanschdichtungen — hitzebeständig bis 250°C Dauertemperatur. Perfekt für Motordeckel, Getriebegehäuse und alle Stellen wo keine Papierdichtung passt. Im praktischen 2er-Pack.</div>
+    <div class="divider"></div>
+    <div class="price-row"><div class="price-main">€ 14,90</div><div class="price-sub">inkl. MwSt. · zzgl. Versand</div></div>
+    <div class="specs"><div class="spec"><div class="spec-label">Typ</div><div class="spec-val">RTV Silikon rot</div></div><div class="spec"><div class="spec-label">Temperatur</div><div class="spec-val">bis 250°C</div></div><div class="spec"><div class="spec-label">Inhalt</div><div class="spec-val">2× 85g</div></div><div class="spec"><div class="spec-label">Aushärtung</div><div class="spec-val">Raumtemperatur</div></div></div>
+    <div class="includes"><div class="includes-title">Lieferumfang</div><div class="includes-list"><div class="includes-item"><div class="includes-dot"></div>2× RTV Silikon rot 85g</div><div class="includes-item"><div class="includes-dot"></div>2× Auftragspitzen</div></div></div>
+    <div class="qty-row">
+      <div class="qty-label">Menge</div>
+      <div class="qty-control">
+        <button class="qty-btn" onclick="changeQty(-1)">−</button>
+        <div class="qty-num" id="qty">1</div>
+        <button class="qty-btn" onclick="changeQty(1)">+</button>
+      </div>
+    </div>
+    <button class="btn-add" onclick="addToCart('Dichtmasse RTV', 14.9, '🧪', 'https://buy.stripe.com/6oUaEZdqsg4LbBh76rdEs05')">🛒 In den Warenkorb</button>
+    <div class="features">
+      <div class="feature"><div class="feature-dot"></div>Versand 2–3 Werktage</div>
+      <div class="feature"><div class="feature-dot"></div>14 Tage Rückgabe</div>
+      <div class="feature"><div class="feature-dot"></div>Sichere Zahlung</div>
+    </div>
+  </div>
+</div>
+
+<div class="overlay" id="overlay" onclick="toggleCart()"></div>
+<div class="cart-drawer" id="cartDrawer">
+  <div class="drawer-header"><div class="drawer-title">WARENKORB</div><button class="close-btn" onclick="toggleCart()">✕</button></div>
+  <div class="drawer-items" id="drawerItems"><div class="empty-cart">Dein Warenkorb ist leer.</div></div>
+  <div class="drawer-footer">
+    <div class="total-row"><div class="total-label">Gesamt</div><div class="total-amount" id="totalAmount">€ 0,00</div></div>
+    <button class="btn-checkout" id="checkoutBtn" onclick="checkout()" disabled>💳 Jetzt bezahlen via Stripe</button>
+    <div class="secure-note">🔒 Sichere Zahlung via Stripe</div>
+  </div>
+</div>
+<div class="toast" id="toast">✓ Zum Warenkorb hinzugefügt</div>
+<script src="cart.js"></script>
+
+<footer>
+  <div>© 2025 SamyScripts · Alle Preise inkl. MwSt.</div>
+  <div>Versand · Rückgabe · Impressum</div>
+</footer>
+</body>
+</html>

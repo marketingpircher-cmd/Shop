@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2K Grundierung – SamyScripts Shop</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="index.html">SAMYSCRIPTS</a>
+  <div class="nav-right">
+    <a class="back-btn" href="index.html">← Alle Produkte</a>
+    <button class="cart-btn" onclick="toggleCart()">🛒 Warenkorb <div class="cart-count" id="cartCount">0</div></button>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="product-image-area">
+    <!-- BILD: Ersetze src="BILD_GRUNDIERUNG_2K" mit deinem Bildlink -->
+    <div class="img-placeholder">🎨</div>
+  </div>
+  <div class="product-info">
+    <div class="product-tag">✦ Lackierung</div>
+    <div class="product-name">2K<br>GRUNDIERUNG</div>
+    <div class="product-desc">Zweikomponenten-Grundierung für maximale Haftung und Korrosionsschutz auf Metall und Kunststoff. Besonders geeignet für Rahmen, Schwingen und alle blanken Metallteile vor der Neulackierung.</div>
+    <div class="divider"></div>
+    <div class="price-row"><div class="price-main">€ 19,90</div><div class="price-sub">inkl. MwSt. · zzgl. Versand</div></div>
+    <div class="specs"><div class="spec"><div class="spec-label">Komponenten</div><div class="spec-val">2K System</div></div><div class="spec"><div class="spec-label">Untergrund</div><div class="spec-val">Metall/Kunststoff</div></div><div class="spec"><div class="spec-label">Schutz</div><div class="spec-val">Korrosionsschutz</div></div><div class="spec"><div class="spec-label">Trocknung</div><div class="spec-val">ca. 60 Min.</div></div></div>
+    <div class="includes"><div class="includes-title">Lieferumfang</div><div class="includes-list"><div class="includes-item"><div class="includes-dot"></div>1× 2K Grundierung Set</div><div class="includes-item"><div class="includes-dot"></div>Härter inkl.</div></div></div>
+    <div class="qty-row">
+      <div class="qty-label">Menge</div>
+      <div class="qty-control">
+        <button class="qty-btn" onclick="changeQty(-1)">−</button>
+        <div class="qty-num" id="qty">1</div>
+        <button class="qty-btn" onclick="changeQty(1)">+</button>
+      </div>
+    </div>
+    <button class="btn-add" onclick="addToCart('2K Grundierung', 19.9, '🎨', 'https://buy.stripe.com/8x214p72405N20HcqLdEs02')">🛒 In den Warenkorb</button>
+    <div class="features">
+      <div class="feature"><div class="feature-dot"></div>Versand 2–3 Werktage</div>
+      <div class="feature"><div class="feature-dot"></div>14 Tage Rückgabe</div>
+      <div class="feature"><div class="feature-dot"></div>Sichere Zahlung</div>
+    </div>
+  </div>
+</div>
+
+<div class="overlay" id="overlay" onclick="toggleCart()"></div>
+<div class="cart-drawer" id="cartDrawer">
+  <div class="drawer-header"><div class="drawer-title">WARENKORB</div><button class="close-btn" onclick="toggleCart()">✕</button></div>
+  <div class="drawer-items" id="drawerItems"><div class="empty-cart">Dein Warenkorb ist leer.</div></div>
+  <div class="drawer-footer">
+    <div class="total-row"><div class="total-label">Gesamt</div><div class="total-amount" id="totalAmount">€ 0,00</div></div>
+    <button class="btn-checkout" id="checkoutBtn" onclick="checkout()" disabled>💳 Jetzt bezahlen via Stripe</button>
+    <div class="secure-note">🔒 Sichere Zahlung via Stripe</div>
+  </div>
+</div>
+<div class="toast" id="toast">✓ Zum Warenkorb hinzugefügt</div>
+<script src="cart.js"></script>
+
+<footer>
+  <div>© 2025 SamyScripts · Alle Preise inkl. MwSt.</div>
+  <div>Versand · Rückgabe · Impressum</div>
+</footer>
+</body>
+</html>
