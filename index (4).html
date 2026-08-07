@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SamyScripts – AM6 Shop</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.card-price-row { display:flex; justify-content:space-between; align-items:center; margin-top:12px; }
+.btn-cart { background:var(--accent); color:#000; border:none; padding:10px 16px; border-radius:8px; font-family:"DM Sans",sans-serif; font-size:13px; font-weight:700; cursor:pointer; transition:background 0.2s, transform 0.1s; white-space:nowrap; }
+.btn-cart:hover { background:var(--accent-dim); }
+.btn-cart:active { transform:scale(0.96); }
+.product-card { background:var(--surface); border:1px solid var(--border); border-radius:14px; overflow:hidden; display:block; color:inherit; transition:border-color 0.25s, transform 0.25s, box-shadow 0.25s; }
+.product-card:hover { border-color:var(--accent); transform:translateY(-4px); box-shadow:0 12px 40px rgba(0,0,0,0.5); }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="index.html">SAMYSCRIPTS</a>
+  <div class="nav-right">
+    <a class="nav-cat-btn" href="#werkzeug">🔧 Werkzeug</a>
+    <a class="nav-cat-btn" href="#lackierung">🎨 Lackierung</a>
+    <a class="nav-cat-btn" href="#ersatzteile">⚙️ Ersatzteile</a>
+    <button class="cart-btn" onclick="toggleCart()">🛒 Warenkorb <div class="cart-count" id="cartCount">0</div></button>
+  </div>
+</nav>
+
+<div class="shop-header">
+  <div class="shop-header-inner">
+    <div class="header-label">✦ Werkzeug, Zubehör & Ersatzteile</div>
+    <div class="header-title">AM6<br><span>SHOP</span></div>
+    <div class="header-desc">Hochwertiges Werkzeug und Zubehör für deinen AM6-Motor. Direkt vom Händler — schnell geliefert.</div>
+  </div>
+</div>
+
+<div class="jump-bar">
+  <div class="jump-label">Kategorien</div>
+  <a class="jump-btn" href="#werkzeug">🔧 Werkzeug & Zubehör <span class="jb-count">19</span></a>
+  <a class="jump-btn" href="#lackierung">🎨 Lackierung <span class="jb-count">3</span></a>
+  <a class="jump-btn" href="#ersatzteile">⚙️ Ersatzteile <span class="jb-count">bald</span></a>
+</div>
+
+  <div class="cat-section" id="werkzeug">
+    <div class="section-head">
+      <div><div class="section-label-sm">Kategorie</div><div class="section-title">WERKZEUG & ZUBEHÖR</div></div>
+      <div class="section-count">19 Produkte</div>
+    </div>
+    <div class="product-grid">
+    <div class="product-card">
+      <div class="card-img" style="background-image:url('https://i.ibb.co/60MgQRtR/71kl-P8rhvu-L-AC-SL1500.jpg');background-size:contain;background-repeat:no-repeat;background-position:center;"><div class="card-badge">Neu</div>
+      </div>
+      <div class="card-body">
+        <div class="card-name">Kolbenstopper AM6</div>
+        <div class="card-price-row">
+          <div><div class="card-price">€ 12,99</div><div class="card-price-sub">inkl. MwSt.</div></div>
+          <button class="btn-cart" onclick="addToCart('Kolbenstopper AM6', 12.99, '🔧', 'https://buy.stripe.com/cNi00l868dWDdJpcqLdEs0i')">🛒 Kaufen</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="card-img" style="background-image:url('https://i.ibb.co/ynyrXnzH/71-B-O2fw-PTL-AC-SL1500.jpg');background-size:contain;background-repeat:no-repeat;background-position:center;"><div class="card-badge">Neu</div>
+      </div>
+      <div class="card-body">
+        <div class="card-name">Lagerabzieher Set</div>
+        <div class="card-price-row">
+          <div><div class="card-price">€ 39,90</div><div class="card-price-sub">inkl. MwSt.</div></div>
+          <button class="btn-cart" onclick="addToCart('Lagerabzieher Set', 39.9, '🔧', 'https://buy.stripe.com/8x228t4TW9GnfRx4YjdEs0h')">🛒 Kaufen</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="card-img" style="background-image:url('https://i.ibb.co/27x6c7qT/81l-RVSt-Mo-QL-AC-SL1500.jpg');background-size:contain;background-repeat:no-repeat;background-position:center;"><div class="card-badge">Neu</div>
+      </div>
+      <div class="card-body">
+        <div class="card-name">Außen/Innensechskantsatz</div>
+        <div class="card-price-row">
+          <div><div class="card-price">€ 59,90</div><div class="card-price-sub">inkl. MwSt.</div></div>
+          <button class="btn-cart" onclick="addToCart('Außen/Innensechskantsatz', 59.9, '🔧', 'https://buy.stripe.com/7sY9AV9ac3hZaxdeyTdEs0g')">🛒 Kaufen</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="card-img" style="background-image:url('https://i.ibb.co/yF69JPgM/41-Nciv1-DMo-L-AC-SL1000.jpg');background-size:contain;background-repeat:no-repeat;background-position:center;"><div class="card-badge">Neu</div>
+      </div>
+      <div class="card-body">
+        <div class="card-name">Gummihammer</div>
+        <div class="card-price-row">
+          <div><div class="card-price">€ 14,90</div><div class="card-price-sub">inkl. MwSt.</div></div>
+          <button class="btn-cart" onclick="addToCart('Gummihammer', 14.9, '🔨', 'https://buy.stripe.com/cNi5kFdqsaKr8p5gH1dEs0f')">🛒 Kaufen</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="card-img" style="background-image:url('https://i.ibb.co/BK6XBCq7/619u-N45-TXf-L-AC-SL1500.jpg');background-size:contain;background-repeat:no-repeat;background-position:center;"><div class="card-badge">Neu</div>
+      </div>
+      <div class="card-body">
+        <div class="card-name">Schraubenzieher-Set</div>
+        <div class="card-price-row">
+          <div><div class="card-price">€ 19,90</div><div class="card-price-sub">inkl. MwSt.</div></div>
+          <button class="btn-cart" onclick="addToCart('Schraubenzieher-Set', 19.9, '🔧', 'https://buy.stripe.com/3cI4gB5Y0bOv48P3UfdEs0e')">🛒 Kaufen</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="card-img" style="background-image:url('https://i.ibb.co/NgMMKjPN/810i-ZHg7kc-L-AC-SL1500.jpg');background-size:contain;background-repeat:no-repeat;background-position:center;"><div class="card-badge">Neu</div>
+      </div>
+      <div class="card-body">
+        <div class="card-name">Schlagschrauber 18V</div>
+        <div class="card-price-row">
+          <div><div class="card-price">€ 159,90</div><div class="card-price-sub">inkl. MwSt.</div></div>
+          <button class="btn-cart" onclick="addToCart('Schlagschrauber 18V', 159.9, '⚡', 'https://buy.stripe.com/aFa5kF9ac3hZ6gX2QbdEs0d')">🛒 Kaufen</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="card-img" style="background-image:url('https://i.ibb.co/nsBCW69q/61-Ej-Xj-UU7a-L-AC-SL1500.jpg');background-size:contain;background-repeat:no-repeat;background-position:center;"><div class="card-badge">Neu</div>
+      </div>
+      <div class="card-body">
+        <div class="card-name">Zangen-Set</div>
+        <div class="card-price-row">
+          <div><div class="card-price">€ 24,90</div><div class="card-price-sub">inkl. MwSt.</div></div>
+          <button class="btn-cart" onclick="addToCart('Zangen-Set', 24.9, '🔧', 'https://buy.stripe.com/7sY00l7242dV48P4YjdEs0c')">🛒 Kaufen</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="card-img" style="background-image:url('https://i.ibb.co/7MzD6b7/61e-Tak-Nx-Nc-L-AC-SL1000.jpg');background-size:contain;background-repeat:no-repeat;background-position:center;"><div class="card-badge">Neu</div>
+      </div>
+      <div class="card-body">
+        <div class="card-name">Abzieher-Set</div>
+        <div class="card-price-row">
+          <div><div class="card-price">€ 29,90</div><div class="card-price-sub">inkl. MwSt.</div></div>
+          <button class="btn-cart" onclick="addToCart('Abzieher-Set', 29.9, '⚙️', 'https://buy.stripe.com/fZu5kFaegf0HcFlduPdEs0b')">🛒 Kaufen</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="card-img" style="background-image:url('https://i.ibb.co/qYLYL98Q/61ti1l-WLs2-L-AC-SL1254.jpg');background-size:contain;background-repeat:no-repeat;background-position:center;"><div class="card-badge">Neu</div>
+      </div>
+      <div class="card-body">
+        <div class="card-name">Bremsenreiniger 12er Set</div>
+        <div class="card-price-row">
+          <div><div class="card-price">€ 39,90</div><div class="card-price-sub">inkl. MwSt.</div></div>
+          <button class="btn-cart" onclick="addToCart('Bremsenreiniger 12er Set', 39.9, '🧴', 'https://buy.stripe.com/5kQ00l4TW5q70WD1M7dEs0a')">🛒 Kaufen</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="card-img" style="background-image:url('https://i.ibb.co/cSXrVdZ4/71f0w744m-CL-AC-SL1500.jpg');background-size:contain;background-repeat:no-repeat;background-position:center;"><div class="card-badge">Neu</div>
+      </div>
+      <div class="card-body">
+        <div class="card-name">Gewindeschneider-Set</div>
+        <div class="card-price-row">
+          <div><div class="card-price">€ 37,90</div><div class="card-price-sub">inkl. MwSt.</div></div>
+          <button class="btn-cart" onclick="addToCart('Gewindeschneider-Set', 37.9, '🔧', 'https://buy.stripe.com/3cI5kFdqs7yfgVBaiDdEs09')">🛒 Kaufen</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="card-img" style="background-image:url('https://i.postimg.cc/90fCTGrQ/717imw-BFn-IL-AC-SL1500.jpg');background-size:contain;background-repeat:no-repeat;background-position:center;"><div class="card-badge">Neu</div>
+      </div>
+      <div class="card-body">
+        <div class="card-name">Lagerabzieher Kurbelwelle</div>
+        <div class="card-price-row">
+          <div><div class="card-price">€ 44,90</div><div class="card-price-sub">inkl. MwSt.</div></div>
+          <button class="btn-cart" onclick="addToCart('Lagerabzieher Kurbelwelle', 44.9, '⚙️', 'https://buy.stripe.com/8683hZ6gX2QbdEs08')">🛒 Kaufen</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="card-img" style="background-image:url('https://i.postimg.cc/fbvGKV4L/6186fpq-Ede-L-AC-SL1500.jpg');background-size:contain;background-repeat:no-repeat;background-position:center;"><div class="card-badge">Neu</div>
+      </div>
+      <div class="card-body">
+        <div class="card-name">Heißluftföhn 2000W</div>
+        <div class="card-price-row">
+          <div><div class="card-price">€ 27,90</div><div class="card-price-sub">inkl. MwSt.</div></div>
+          <button class="btn-cart" onclick="addToCart('Heißluftföhn 2000W', 27.9, '🌡️', 'https://buy.stripe.com/00w4gB3PSdWDgVBduPdEs07')">🛒 Kaufen</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="card-img" style="background-image:url('https://i.postimg.cc/VNTV4nGy/51Jza2t-YKd-L-SL1000.jpg');background-size:contain;background-repeat:no-repeat;background-position:center;"><div class="card-badge">Neu</div>
+      </div>
+      <div class="card-body">
+        <div class="card-name">Loctite 243</div>
+        <div class="card-price-row">
+          <div><div class="card-price">€ 39,90</div><div class="card-price-sub">inkl. MwSt.</div></div>
+          <button class="btn-cart" onclick="addToCart('Loctite 243', 39.9, '🧪', 'https://buy.stripe.com/cNibJ32LO3hZ5cTduPdEs06')">🛒 Kaufen</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="card-img" style="background-image:url('https://i.postimg.cc/qqGQf3Lt/715a-Os-Rtio-L-SL1500.jpg');background-size:contain;background-repeat:no-repeat;background-position:center;"><div class="card-badge">Neu</div>
+      </div>
+      <div class="card-body">
+        <div class="card-name">Dichtmasse RTV</div>
+        <div class="card-price-row">
+          <div><div class="card-price">€ 14,90</div><div class="card-price-sub">inkl. MwSt.</div></div>
+          <button class="btn-cart" onclick="addToCart('Dichtmasse RTV', 14.9, '🧪', 'https://buy.stripe.com/6oUaEZdqsg4LbBh76rdEs05')">🛒 Kaufen</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="card-img" style="background-image:url('https://i.postimg.cc/R0nRS8dB/71b-Xh-CQpzy-L-SL1500.jpg');background-size:contain;background-repeat:no-repeat;background-position:center;"><div class="card-badge">Neu</div>
+      </div>
+      <div class="card-body">
+        <div class="card-name">Digitale Schiebelehre</div>
+        <div class="card-price-row">
+          <div><div class="card-price">€ 24,90</div><div class="card-price-sub">inkl. MwSt.</div></div>
+          <button class="btn-cart" onclick="addToCart('Digitale Schiebelehre', 24.9, '📏', 'https://buy.stripe.com/cNi00l4TW9Gn6gXduPdEs04')">🛒 Kaufen</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="card-img" style="background-image:url('https://i.postimg.cc/L8GtbDS2/51Sk6OFf-Pv-L-AC-SL1500.jpg');background-size:contain;background-repeat:no-repeat;background-position:center;"><div class="card-badge">Neu</div>
+      </div>
+      <div class="card-body">
+        <div class="card-name">Drehmomentschlüssel 5-60Nm</div>
+        <div class="card-price-row">
+          <div><div class="card-price">€ 29,90</div><div class="card-price-sub">inkl. MwSt.</div></div>
+          <button class="btn-cart" onclick="addToCart('Drehmomentschlüssel 5-60Nm', 29.9, '🔧', 'https://buy.stripe.com/9B600l5Y0aKr7l19ezdEs0j')">🛒 Kaufen</button>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+  <div class="cat-section" id="lackierung">
+    <div class="section-head">
+      <div><div class="section-label-sm">Kategorie</div><div class="section-title">LACKIERUNG</div></div>
+      <div class="section-count">3 Produkte</div>
+    </div>
+    <div class="product-grid">
+    <div class="product-card">
+      <div class="card-img" style=""><div class="card-icon">🎨</div><div class="card-badge">Neu</div>
+      </div>
+      <div class="card-body">
+        <div class="card-name">Grundierung Aluminiumgehäuse</div>
+        <div class="card-price-row">
+          <div><div class="card-price">€ 13,90</div><div class="card-price-sub">inkl. MwSt.</div></div>
+          <button class="btn-cart" onclick="addToCart('Grundierung Aluminiumgehäuse', 13.9, '🎨', 'https://buy.stripe.com/4gMdRb7245q76gXeyTdEs03')">🛒 Kaufen</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="card-img" style=""><div class="card-icon">🎨</div><div class="card-badge">Neu</div>
+      </div>
+      <div class="card-body">
+        <div class="card-name">2K Grundierung</div>
+        <div class="card-price-row">
+          <div><div class="card-price">€ 19,90</div><div class="card-price-sub">inkl. MwSt.</div></div>
+          <button class="btn-cart" onclick="addToCart('2K Grundierung', 19.9, '🎨', 'https://buy.stripe.com/8x214p72405N20HcqLdEs02')">🛒 Kaufen</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="card-img" style="background-image:url('https://i.postimg.cc/dtYN3qZZ/61m-SBg-Fs-C2L-AC-SL1500.jpg');background-size:contain;background-repeat:no-repeat;background-position:center;"><div class="card-badge">Neu</div>
+      </div>
+      <div class="card-body">
+        <div class="card-name">Hochtemperaturlack Schwarz</div>
+        <div class="card-price-row">
+          <div><div class="card-price">€ 11,90</div><div class="card-price-sub">inkl. MwSt.</div></div>
+          <button class="btn-cart" onclick="addToCart('Hochtemperaturlack Schwarz', 11.9, '🎨', 'https://buy.stripe.com/eVq8wRaeg4m38p58avdEs01')">🛒 Kaufen</button>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <div class="cat-section" id="ersatzteile">
+    <div class="section-head">
+      <div><div class="section-label-sm">Kategorie</div><div class="section-title">ERSATZTEILE</div></div>
+      <div class="section-count">Bald verfügbar</div>
+    </div>
+    <div class="product-grid">
+      <div class="placeholder-card"><div class="ph-i">⚙️</div><div class="ph-t">Zylinderset<br>folgt bald</div></div>
+      <div class="placeholder-card"><div class="ph-i">⚙️</div><div class="ph-t">Getriebe<br>folgt bald</div></div>
+      <div class="placeholder-card"><div class="ph-i">⚙️</div><div class="ph-t">Kupplung<br>folgt bald</div></div>
+      <div class="placeholder-card"><div class="ph-i">⚙️</div><div class="ph-t">Kurbelwelle<br>folgt bald</div></div>
+    </div>
+  </div>
+
+<footer>
+  <div>© 2025 SamyScripts · Alle Preise inkl. MwSt.</div>
+  <div>Versand · Rückgabe · Impressum</div>
+</footer>
+
+<div class="overlay" id="overlay" onclick="toggleCart()"></div>
+<div class="cart-drawer" id="cartDrawer">
+  <div class="drawer-header"><div class="drawer-title">WARENKORB</div><button class="close-btn" onclick="toggleCart()">✕</button></div>
+  <div class="drawer-items" id="drawerItems"><div class="empty-cart">Dein Warenkorb ist leer.</div></div>
+  <div class="drawer-footer">
+    <div class="total-row"><div class="total-label">Gesamt</div><div class="total-amount" id="totalAmount">€ 0,00</div></div>
+    <button class="btn-checkout" id="checkoutBtn" onclick="checkout()" disabled>💳 Jetzt bezahlen via Stripe</button>
+    <div class="secure-note">🔒 Sichere Zahlung via Stripe</div>
+  </div>
+</div>
+<div class="toast" id="toast">✓ Zum Warenkorb hinzugefügt</div>
+<script src="cart.js"></script>
+</body>
+</html>
